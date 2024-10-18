@@ -1,4 +1,5 @@
-SELECT origin, SUM(nb_fans) AS nb_fans
+-- 2-fans.sql
+SELECT origin, COUNT(*) AS nb_fans
 FROM metal_bands
 GROUP BY origin
 ORDER BY nb_fans DESC;
