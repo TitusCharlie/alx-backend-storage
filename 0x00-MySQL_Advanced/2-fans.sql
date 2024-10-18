@@ -1,6 +1,7 @@
--- This script ranks country origins of bands ordered by the number of (non-unique) fans
+-- 2-fans.sql
+-- This script ranks country origins of bands, ordered by the number of (non-unique) fans.
 
-SELECT origin, SUM(nb_fans) AS nb_fans
+SELECT origin, SUM(nb_fans) AS total_fans
 FROM metal_bands
 GROUP BY origin
-ORDER BY nb_fans DESC;
+ORDER BY total_fans DESC;
